@@ -12,8 +12,9 @@ import (
 func InitializeLogger(logFile string) {
 	log.SetLevel(getLogLevel())
 	log.SetFormatter(&log.TextFormatter{
-		ForceColors:     true,
+		DisableColors:   true,
 		FullTimestamp:   true,
+		PadLevelText:    true,
 		TimestampFormat: time.RFC1123,
 	})
 
