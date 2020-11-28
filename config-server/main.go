@@ -7,11 +7,12 @@ import (
 )
 
 func init() {
-	gotenv.Load()
+	_ = gotenv.Load()
 	Config.InitializeLogger("config-server.log")
+	Config.LoadProperties()
 }
 
 func main() {
-	properties := Config.GetProperties()
-	log.Info(properties)
+	log.Info(Config.GetAllProperties())
+	log.Info(Config.GetProperty("spring.application.name"))
 }
