@@ -1,6 +1,6 @@
-module "config"
+module github.com/nevzatcirak/go-examples/config
 
-go 1.15
+go 1.17
 
 require (
 	github.com/Piszmog/cloudconfigclient v1.6.0
